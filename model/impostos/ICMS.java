@@ -1,15 +1,20 @@
 package model.impostos;
 
-import interfaces.Imposto;
 import model.Orcamento;
 
-public class ICMS implements Imposto {
+public class ICMS extends  ImpostoComposto {
+    
+    public ICMS(){}
 
-    private static final double IMPOSTO_ICMS = 0.01;
+    public ICMS(ImpostoComposto outroImposto) {
+        super(outroImposto);
+    }
+    
+    private static final double IMPOSTO_ICMS = 0.1;
     
     @Override
     public double calcular(Orcamento orcamento){
-        return orcamento.getValor() * IMPOSTO_ICMS;
+        return orcamento.getValor() * IMPOSTO_ICMS + this.calcularOutroImposto(orcamento);
     }
     
 }

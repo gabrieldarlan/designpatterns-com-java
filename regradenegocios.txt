@@ -43,3 +43,14 @@ Apredemos o Template Method
 Padrão Template Method - secao 2, aula 4
 =================================================
 *
+=================================================
+Padrão Decorator - secao 2, aula 5
+=================================================
+Precismos ter impostos que podem ser compostos ou não por outros impostos.
+ISS é composto por ICMS
+
+Aprendemos o padrão Decorator
+=================================================
+Padrão Decorator - secao 2, aula 5
+=================================================
+*
