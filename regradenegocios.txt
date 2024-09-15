@@ -1,0 +1,45 @@
+Ter um sistema que cria orçamento e precisa calcular impostos diversos
+
+=================================================
+PADRÃO STRATEGY - secao 2, aula 2
+=================================================
+impostos
+
+ICMS = 10%
+ISS = 7%
+PIS = 5%
+COFINS = 5%
+
+Qual o valor do ICMS do Orcamento
+Qual o valor do ISS do Orcamento.
+=================================================
+PADRÃO STRATEGY - secao 2, aula 2
+=================================================
+
+*
+=================================================
+PADRÃO Chain of responsibility - secao 2, aula 3
+=================================================
+Todo orcamento pode ter descontos variados
+Desconto por mais de 5 itens
+Desconto maior que 500.0
+=================================================
+PADRÃO Chain of responsibility - secao 2, aula 3
+=================================================
+*
+=================================================
+Padrão Template Method - secao 2, aula 4
+=================================================
+3° Exemplo:
+
+Precisamos aplicar no nossos projeto mais 2 novos impostos.
+
+COFINS = valor >= 500 7% || 5%  valor >= 500 7% || 5%  - OK
+ST = valor >= 500 && ter algum item com valor > 100 6% || 4%
+
+Diminuir a repetição de código e facilitar diferentes implementar em um unico lugar.
+Apredemos o Template Method
+=================================================
+Padrão Template Method - secao 2, aula 4
+=================================================
+*
