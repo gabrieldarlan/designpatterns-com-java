@@ -1,8 +1,7 @@
 
-import interfaces.Imposto;
 import model.Orcamento;
-import model.impostos.ICMS;
-import model.impostos.ISS;
+
+
 
 
 public class App {
@@ -44,15 +43,30 @@ public class App {
         
         // double impostoSt = calculadora.calcular(orcamento, st);
         // System.out.println("Valor imposto cofins: "+ impostoSt);
-
+        
         //! Composição - Decorator
-        Imposto iss = new ISS(new ICMS());
-
-        Orcamento orcamento = new Orcamento(500.0);
-
-        double valor = iss.calcular(orcamento);
-
-        System.out.println(valor);
+        // Imposto iss = new ISS(new ICMS());
+        
+        // Orcamento orcamento = new Orcamento(500.0);
+        
+        // double valor = iss.calcular(orcamento);
+        
+        // System.out.println(valor);
+        
+        //! Padrão State
+        Orcamento reforma = new Orcamento(500.0);
+        System.out.println("Valor da reforma antes do desconto: "+ reforma.getValor());
+        reforma.aplicarDescontoExtra();
+        System.out.println("Valor da reforma depois do desconto: "+ reforma.getValor());
+        reforma.aprovar();
+        reforma.aplicarDescontoExtra();
+        System.out.println("Valor da reforma após aprovação depois do desconto: "+ reforma.getValor());
+        
+        
+        reforma.finalizar();
+        reforma.aplicarDescontoExtra();
+        System.out.println("Valor da reforma após aprovação depois do desconto: "+ reforma.getValor());
+        
         
     }
 }
