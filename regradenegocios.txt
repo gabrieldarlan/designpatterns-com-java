@@ -76,3 +76,19 @@ Aprendemos o padrão State
 Padrão State - secao 2, aula 6
 =================================================
 *
+=================================================
+Padrão Builder - secao 2, aula 7
+=================================================
+6° Exemplo:
+
+Eu quero criar uma nota fiscal e poder construir ela de maneira simples.
+
+Aprendemos o padrão builder.
+
+Fluent Interface ou Method Chaining
+
+Ele ajuda agente a desacoplar o código,  ele não conhece as ações, ele simplismente executa não importa quantas tenham.
+Um dos padrões mais utilizados no dia a dia.
+=================================================
+Padrão Builder - secao 2, aula 7
+=================================================

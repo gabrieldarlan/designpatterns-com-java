@@ -1,5 +1,11 @@
 
-import model.Orcamento;
+import model.Item;
+import model.NotaFiscal;
+import model.NotaFiscalBuilder;
+
+
+
+
 
 
 
@@ -54,18 +60,32 @@ public class App {
         // System.out.println(valor);
         
         //! Padrão State
-        Orcamento reforma = new Orcamento(500.0);
-        System.out.println("Valor da reforma antes do desconto: "+ reforma.getValor());
-        reforma.aplicarDescontoExtra();
-        System.out.println("Valor da reforma depois do desconto: "+ reforma.getValor());
-        reforma.aprovar();
-        reforma.aplicarDescontoExtra();
-        System.out.println("Valor da reforma após aprovação depois do desconto: "+ reforma.getValor());
+        // Orcamento reforma = new Orcamento(500.0);
+        // System.out.println("Valor da reforma antes do desconto: "+ reforma.getValor());
+        // reforma.aplicarDescontoExtra();
+        // System.out.println("Valor da reforma depois do desconto: "+ reforma.getValor());
+        // reforma.aprovar();
+        // reforma.aplicarDescontoExtra();
+        // System.out.println("Valor da reforma após aprovação depois do desconto: "+ reforma.getValor());
         
         
-        reforma.finalizar();
-        reforma.aplicarDescontoExtra();
-        System.out.println("Valor da reforma após aprovação depois do desconto: "+ reforma.getValor());
+        // reforma.finalizar();
+        // reforma.aplicarDescontoExtra();
+        // System.out.println("Valor da reforma após aprovação depois do desconto: "+ reforma.getValor());
+        
+        
+        
+        var construtor = new NotaFiscalBuilder();
+        NotaFiscal notaFiscal= construtor
+            .comRazaoSocial("Desenvolvimento LTDA")
+            .comCnpj("08828950000110")
+            .comItem(new Item("Martelo", 50.0))
+            .comItem(new Item("Furadeira", 150.0))
+            .comObservacao("Teste")
+            .construir();
+        
+        System.out.println(notaFiscal);
+        
         
         
     }
